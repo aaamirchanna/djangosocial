@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account settings</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="" method="post" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <img width="500px" height="500px" src="{{user_porfile.profileimg.url}}" alt="ig">
+        Profile Image <input type="file" >
+        Locaion <input type="text" value="{{user_porfile.location}}">
+        Bio <textarea >{{user_porfile.bio}}"</textarea>
+        <button type="submit">Submit</button>
+        <a href="/">Cancel</a>
+        
+    </form>
+</body>
+</html>
